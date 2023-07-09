@@ -14,13 +14,11 @@ private fun cachePath(context: Context) = "${context.cacheDir.path}${separator}c
 
 fun File.compressFormat() = when (extension.toLowerCase()) {
     "png" -> Bitmap.CompressFormat.PNG
-    "webp" -> Bitmap.CompressFormat.WEBP
     else -> Bitmap.CompressFormat.JPEG
 }
 
 fun Bitmap.CompressFormat.extension() = when (this) {
     Bitmap.CompressFormat.PNG -> "png"
-    Bitmap.CompressFormat.WEBP -> "webp"
     else -> "jpg"
 }
 
